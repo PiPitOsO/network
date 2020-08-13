@@ -9,7 +9,6 @@ public class Main1 {
     public static void main(String[] args) throws IOException {
         int port = 11566;
         ServerSocket serverSocket = new ServerSocket(port); // порт можете выбрать любой в доступном диапазоне 0-65536. Но чтобы не нарваться на уже занятый - рекомендуем использовать около 8080
-        System.out.println("go");
         Socket clientSocket = serverSocket.accept(); // ждем подключения
 
         try (PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true)) {
